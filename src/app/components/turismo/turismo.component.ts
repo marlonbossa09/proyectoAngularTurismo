@@ -1,6 +1,7 @@
 import { Component, NgZone, OnDestroy, OnInit, AfterViewInit } from '@angular/core';
 import * as THREE from 'three';
 import { CSS3DRenderer, CSS3DObject } from 'three/examples/jsm/renderers/CSS3DRenderer.js';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
 @Component({
   selector: 'app-turismo',
