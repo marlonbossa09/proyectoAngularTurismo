@@ -4,10 +4,10 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
 @Component({
-  selector: 'app-modelo3d',
-  template: '<div id="modelo3D"></div>',
+  selector: 'app-modelo3d3',
+  template: '<div id="modelo3D3"></div>',
 })
-export class Modelo3DComponent implements OnInit, OnDestroy {
+export class Modelo3D3Component implements OnInit, OnDestroy {
   private scene: THREE.Scene;
   private camera: THREE.PerspectiveCamera;
   private renderer: THREE.WebGLRenderer;
@@ -15,8 +15,8 @@ export class Modelo3DComponent implements OnInit, OnDestroy {
 
   constructor(private ngZone: NgZone) {
     this.scene = new THREE.Scene();
-    this.camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000); // Adjust the aspect ratio
-    this.renderer = new THREE.WebGLRenderer({ alpha: true }); // Set alpha to true for a transparent background
+    this.camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
+    this.renderer = new THREE.WebGLRenderer({ alpha: true });
     this.controls = new OrbitControls(this.camera, this.renderer.domElement);
   }
 
@@ -32,23 +32,29 @@ export class Modelo3DComponent implements OnInit, OnDestroy {
   private init() {
     // Cargar y agregar el modelo 3D aquí
     const loader = new GLTFLoader();
-    loader.load('assets/img/estatua.glb', (gltf) => {
+    loader.load('assets/img/torre.glb', (gltf) => {
       const modelo: any = gltf.scene;
-      modelo.position.set(0, 0, 0);
+      modelo.position.set(0, -1, 0);
       modelo.scale.set(1, 1, 1);
+      modelo.rotation.x = Math.PI / 8;
       this.scene.add(modelo);
     });
 
     // Configurar la cámara y el renderizador
-    this.camera.position.z = 0.5;
+    this.camera.position.z = 90;
     this.renderer.setSize(window.innerWidth * 0.78, window.innerHeight * 0.5);
 
     // Agregar el renderizador al contenedor HTML
-    const contenedor = document.getElementById('modelo3D');
+    const contenedor = document.getElementById('modelo3D3');
     contenedor!.appendChild(this.renderer.domElement);
 
     // Ajustar el tamaño del renderizador al contenedor
     this.renderer.setSize(contenedor!.clientWidth, contenedor!.clientHeight);
+
+    // Agregar luz direccional
+    const luzDireccional = new THREE.DirectionalLight(0xffffff, 1);
+    luzDireccional.position.set(1, 1, 1).normalize();
+    this.scene.add(luzDireccional);
   }
 
   private animate() {

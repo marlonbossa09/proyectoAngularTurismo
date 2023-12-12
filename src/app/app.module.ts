@@ -14,6 +14,8 @@ import { HeroesService } from './components/services/heroes.service';
 import { TurismoComponent } from './components/turismo/turismo.component';
 import { ThreeSceneComponent } from './three-scene/three-scene.component';
 import { Modelo3DComponent } from './components/home/modelo3D.component';
+import { Modelo3D2Component } from './components/home/modelo3D2.component';
+import { Modelo3D3Component } from './components/home/modelo3D3.component';
 
 // SERVICIOS
 
@@ -26,7 +28,9 @@ import { Modelo3DComponent } from './components/home/modelo3D.component';
     HeroesComponent,
     TurismoComponent,
     ThreeSceneComponent,
-    Modelo3DComponent
+    Modelo3DComponent,
+    Modelo3D2Component,
+    Modelo3D3Component
   ],
   imports: [
     BrowserModule,

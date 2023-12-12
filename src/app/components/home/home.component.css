@@ -1,3 +1,13 @@
 .lol{
   background: red;
 }
+.custom-border-primary {
+  border: 3px solid #007BFF; /* Cambia el grosor y el color según sea necesario */
+}
+
+.embed-responsive-item {
+  border-radius: 10px;
+  overflow: hidden;
+  opacity: 0.8;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
