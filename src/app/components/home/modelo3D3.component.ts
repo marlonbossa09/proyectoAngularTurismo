@@ -42,7 +42,7 @@ export class Modelo3D3Component implements OnInit, OnDestroy {
 
     // Configurar la cámara y el renderizador
     this.camera.position.z = 90;
-    this.renderer.setSize(window.innerWidth * 0.78, window.innerHeight * 0.5);
+    this.renderer.setSize(window.innerWidth * 0.78, window.innerHeight * 0.46);
 
     // Agregar el renderizador al contenedor HTML
     const contenedor = document.getElementById('modelo3D3');
