@@ -1,29 +1,32 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">
-        <img src="assets/img/A-64.png" width="30" height="30" alt="">
-      </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<footer class="footer mt-auto py-3 bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h5>Contacto</h5>
+        <p>Dirección: Calle, Cartagena</p>
+        <p>Teléfono: +57 3124567891</p>
+        <p>Email: cartagena@turismo.com</p>
+      </div>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link" [routerLink]="['home']">Home</a>
-        </li>
-        <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link" [routerLink]="['heroes']">Heroes</a>
-        </li>
-        <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link" [routerLink]="['about']">About</a>
-        </li>
-        <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link" [routerLink]="['turismo']">Turismo</a>
-        </li>
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
-      </form>
+      <div class="col-md-4">
+        <h5>QUIENES SOMOS</h5>
+        <ul class="list-unstyled">
+          <li routerLinkActive="active"><a href="#">Acerca de nosotros</a></li>
+          <li routerLinkActive="active"><a  [routerLink]="['about']">Destinos</a></li>
+          <li routerLinkActive="active"><a [routerLink]="['heroes']">Promociones</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-4">
+        <h5>Redes sociales</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" target="_blank">Facebook</a></li>
+          <li><a href="#" target="_blank">Twitter</a></li>
+          <li><a href="#" target="_blank">Instagram</a></li>
+          <li><a href="#" target="_blank">LinkedIn</a></li>
+        </ul>
+      </div>
     </div>
-  </nav>
+  </div>
+</footer>

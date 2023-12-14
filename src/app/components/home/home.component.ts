@@ -1,6 +1,5 @@
 import {
   Component,
-  ElementRef,
   NgZone,
   OnDestroy,
   OnInit,
@@ -8,7 +7,7 @@ import {
 import * as THREE from 'three';
 import { GLTF, GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
-import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader.js';
+
 
 @Component({
   selector: 'app-home',
@@ -29,6 +28,8 @@ export class HomeComponent implements OnInit, OnDestroy {
   private mixer: THREE.AnimationMixer;
   private action: any | THREE.AnimationAction;
   private clock: THREE.Clock;
+  private objects: THREE.Object3D[] = [];
+  private currentObjectIndex: number = 0;
 
   constructor(private ngZone: NgZone) {
     this.scene = new THREE.Scene();
@@ -61,8 +62,10 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
   }
 
+
+
   private init() {
-    this.camera.position.z = 100;
+    this.camera.position.z = 50;
     this.camera.scale.set(0.5, 0.5, 0.5);
 
     this.renderer.setSize(window.innerWidth * 0.78, window.innerHeight * 0.78);
@@ -86,8 +89,10 @@ export class HomeComponent implements OnInit, OnDestroy {
     // Dentro de la función loadGLB, después de agregar el modelo a la escena
     this.loadGLB('assets/img/torre.glb').then((gltf3) => {
       const torre: any = gltf3.scene;
-      torre.position.set(-55, 0, 0);
+
+      torre.position.set(-55, -30, 0);
       this.scene.add(torre);
+      this.objects.push(torre);
 
     });
 
@@ -95,30 +100,36 @@ export class HomeComponent implements OnInit, OnDestroy {
       const fiesta: any = gltf5.scene;
 
       fiesta.scale.set(8, 8, 8);
-      fiesta.position.set(-105, 0, 0);
+      fiesta.position.set(-105, -30, 0);
       this.scene.add(fiesta);
+      this.objects.push(fiesta);
     });
 
     this.loadGLB('assets/img/calles.glb').then((gltf4) => {
       const calle: any = gltf4.scene;
-      calle.position.set(90, 0, 0);
+      calle.position.set(90, -30, 0);
       this.scene.add(calle);
+      this.objects.push(calle);
     });
     this.loadGLB('assets/img/castillo.glb').then((gltf) => {
       const castillo: any = gltf.scene;
       castillo.scale.set(5, 5, 5);
-      castillo.position.set(400, 0, 0);
+      castillo.position.set(380, -30, 0);
+      this.scene.add(castillo);
       this.scene.add(castillo);
     });
     this.loadGLB('assets/img/estatua.glb').then((gltf2) => {
       const estatua: any = gltf2.scene;
       estatua.scale.set(20, 20, 20);
-      estatua.position.set(-180, 0, 100);
+      estatua.position.set(-180, -30, 100);
+      this.scene.add(estatua);
       this.scene.add(estatua);
     });
 
     this.loadSkyboxHDR();
   }
+
+
 
   private onPointerMove(event: MouseEvent) {
     this.pointer.x = (event.clientX / window.innerWidth) * 2 - 1;
@@ -148,23 +159,37 @@ if (this.intersects.length > 0) {
 }
   }
 
-  private animate() {
-    this.ngZone.runOutsideAngular(() => {
-      const animateFn = () => {
-        requestAnimationFrame(animateFn);
+  // ...
+// ...
 
-        if (this.objet3d && this.clips.length > 0) {
-          const delta = this.clock.getDelta();
-          this.mixer.update(delta);
-        }
+private animate() {
+  this.ngZone.runOutsideAngular(() => {
+    let moveDirection = 1; // Dirección inicial
 
-        this.controls.update();
-        this.renderer.render(this.scene, this.camera);
-      };
+    const animateFn = () => {
+      requestAnimationFrame(animateFn);
 
-      animateFn();
-    });
-  }
+      // Mueve la cámara horizontalmente en cada fotograma
+      this.camera.position.x += 1 * moveDirection; // Ajusta la velocidad según tus necesidades
+
+      // Verifica los límites y cambia la dirección si es necesario
+      if (this.camera.position.x >= 600 || this.camera.position.x <= -300) {
+        moveDirection *= -1;
+      }
+
+      this.controls.update();
+      this.renderer.render(this.scene, this.camera);
+    };
+
+    animateFn();
+  });
+}
+
+// ...
+
+
+// ...
+
 
   private async loadGLB(url: string): Promise<GLTF> {
     const loader = new GLTFLoader();
@@ -172,10 +197,14 @@ if (this.intersects.length > 0) {
   }
 
   private async loadSkyboxHDR() {
-    const loader = new RGBELoader();
-    const texture = await loader.loadAsync('assets/img/fondo.hdr');
-    texture.mapping = THREE.EquirectangularReflectionMapping;
+    const loader = new THREE.TextureLoader();
+    const texture = await loader.loadAsync('assets/img/oscuro.jpg');
+
+    // Asigna la textura a la escena o al fondo según tus necesidades
     this.scene.background = texture;
-    this.scene.environment = texture;
+    // O si quieres usarla para entorno:
+    // this.scene.environment = texture;
   }
+
+
 }

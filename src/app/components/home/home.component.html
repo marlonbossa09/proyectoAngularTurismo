@@ -1,10 +1,18 @@
 <div class="xd container">
   <div class="jumbotron-fluid animated fadeIn fast">
-    <div class="container fadeIn fast">
+    <div class="container fadeIn fast text-center position-relative">
       <h1 class="main-text display-2 text-white">Cartagena</h1>
       <h4 class="main-text2 display-2 text-white">
         Muy noble, muy leal y siempre heroica
       </h4>
+      <a
+        class="btn boton"
+        [routerLink]="['/heroes']"
+        role="button"
+        style="background-color: #240df0; border-color: #240df0; color: #fff"
+      >
+        Contactar
+      </a>
       <hr />
       <div
         class="embed-responsive embed-responsive-item embed-responsive-16by9 mt-4"
@@ -74,7 +82,7 @@
           <h5 class="textoCarta card-title">Pedro de Heredia</h5>
           <!-- Usar el nuevo componente de modelo3D -->
           <app-modelo3d></app-modelo3d>
-          <p class="textoFormato fondo-blanco" >
+          <p class="textoFormato fondo-blanco">
             Pedro de Heredia fue un explorador y conquistador español, conocido
             por ser el fundador de la ciudad de Cartagena de Indias en la actual
             Colombia.
@@ -104,19 +112,30 @@
           <!-- Contenido de la segunda tarjeta -->
           <app-modelo3d3></app-modelo3d3>
           <p class="textoFormato fondo-blanco">
-           Con murallas y fortalezas, la ciudad ha preservado
-            su patrimonio colonial. Hoy, Cartagena es un destino turístico
-            destacado, conocido por su rica cultura, playas y arquitectura
-            histórica.
+            Con murallas y fortalezas, la ciudad ha preservado su patrimonio
+            colonial. Hoy, Cartagena es un destino turístico destacado, conocido
+            por su rica cultura, playas y arquitectura histórica.
           </p>
         </div>
       </div>
     </div>
   </div>
-
+  <div style="background-color: #fff; border-radius: 10px; opacity: 0.9">
+    <h2 class="ml-3 p-2" style="font-weight: bold; font-size: 20px">
+      Descubre a Cartagena
+    </h2>
+    <a
+      class="btn ml-5 mb-3 mt-2"
+      [routerLink]="['/about']"
+      role="button"
+      style="background-color: #240df0; border-color: #240df0; color: #fff"
+    >
+      Ver más sitios
+    </a>
+  </div>
   <div class="container embed-responsive">
     <h1 class="textoP text-white">Recorrido</h1>
-    <hr/>
-    <div id="fondos" style="width: 100%; height: 100%"></div>
+    <hr />
+    <div class="espacio" id="fondos" style="width: 100%; height: 100%"></div>
   </div>
 </div>

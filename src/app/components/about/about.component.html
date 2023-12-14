@@ -1,5 +1,93 @@
-<h1 class="animated fadeIn fast"> Sobre comic App</h1>
-<hr>
-<p class="animated fadeIn">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-</p>
+<div class="xd container">
+  <div class="jumbotron-fluid animated fadeIn fast">
+    <div class="container fadeIn fast">
+      <h1 class="main-text display-2 text-white">Cartagena</h1>
+      <h4 class="main-text2 display-2 text-white">
+        Muy noble, muy leal y siempre heroica
+      </h4>
+      <a class="btn boton" [routerLink]="['home']" role="button" style="background-color: #240df0; border-color: #240df0; color: #fff;">
+        Inicio
+    </a>
+
+      <hr />
+      <div
+        class="embed-responsive embed-responsive-item embed-responsive-16by9 mt-4"
+      >
+        <video class="embed-responsive-item" autoplay muted loop controls>
+          <source src="assets/img/Cartagena.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <script type="module" src="./index.js"></script>
+    </div>
+  </div>
+
+  <div class="jumbotron-fluid container embed-responsive mt-4">
+    <p class="textoP text-white">
+      SITIOS EMBLEMÁTICOS DE LA CIUDAD
+    </p>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title tituloCard">
+              Castillo de San Felipe de Barajas
+            </h5>
+            <p class="card-text">
+              La construcción del castillo San Felipe de Barajas dio comienzo en 1536 por militares españoles y esclavos africanos.
+              Gracias a esta considerable altura, se divisaba cualquier movimiento del enemigo y por consecuencia, se maximizaba el tiempo de reacción ante cualquier intento de invasión.
+            </p>
+            <img
+              src="assets/img/felipe.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+          </div>
+        </div>
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title tituloCard">
+              Convento de Santa Cruz de la Popa
+            </h5>
+            <p class="card-text">
+              Los españoles que lo descubrieron en 1510 nunca se imaginaron ver
+              una enorme galera que sobresalía del mar, por lo que lo llamaron
+              Cerro de la Galera, y a la cima, "La Popa de la Galera".
+            </p>
+            <img
+              src="assets/img/popa.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title tituloCard">Palacio de la Inquisición</h5>
+            <p class="card-text">
+              El museo ofrece a través de sus diferentes espacios la posibilidad de conocer la riqueza arquitectónica colonial, la historia y presencia del Tribunal de la Inquisición en la memoria de la ciudad y un recorrido por las diversas etapas de la historia de Cartagena, el Caribe colombiano y la construcción de la sociedad colombiana.
+            </p>
+            <img
+              src="assets/img/palacio.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+          </div>
+        </div>
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title tituloCard">Murallas de Cartagena</h5>
+            <p class="card-text">
+              Fue construida a finales del siglo XVI para la defensa de la ciudad. La fortificación es la más completa del continente América del Sur y una de las mejores y bien conservadas murallas de las ciudades amuralladas del mundo.</p>
+            <img
+              src="assets/img/murallas.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
