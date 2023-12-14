@@ -1,6 +1,141 @@
-<div class="jumbotron jumbotron-fluid animated fadeIn fast">
-    <div class="container">
-      <h1 class="display-4">Comic App</h1>
-      <p class="lead">Esta es una aplicación de comics</p>
+<div class="xd container">
+  <div class="jumbotron-fluid animated fadeIn fast">
+    <div class="container fadeIn fast text-center position-relative">
+      <h1 class="main-text display-2 text-white">Cartagena</h1>
+      <h4 class="main-text2 display-2 text-white">
+        Muy noble, muy leal y siempre heroica
+      </h4>
+      <a
+        class="btn boton"
+        [routerLink]="['/heroes']"
+        role="button"
+        style="background-color: #240df0; border-color: #240df0; color: #fff"
+      >
+        Contactar
+      </a>
+      <hr />
+      <div
+        class="embed-responsive embed-responsive-item embed-responsive-16by9 mt-4"
+      >
+        <video class="embed-responsive-item" autoplay muted loop controls>
+          <source src="assets/img/Cartagena.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <script type="module" src="./index.js"></script>
     </div>
   </div>
+
+  <div class="jumbotron-fluid container embed-responsive mt-4">
+    <p class="textoP text-white">
+      Cartagena de Indias es un destino turístico popular en el departamento de
+      Bolívar.
+    </p>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title tituloCard">
+              Patrimonio histórico de la humanidad
+            </h5>
+            <p class="card-text">
+              Cuenta con una riqueza arquitectónica de estilo colonial. Es una
+              ciudad que cautiva con su encanto histórico, cultural y
+              arquitectónico. Sus calles empedradas y coloridas, sus imponentes
+              murallas coloniales y sus plazas llenas de vida transportan a los
+              visitantes a través de los siglos, ofreciendo una experiencia
+              única
+            </p>
+            <img
+              src="assets/img/cartagenaCalle.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title tituloCard">Historia, bellza y cultura</h5>
+            <p class="card-text">
+              Cartagena de Indias es un destino turístico que combina historia,
+              belleza natural y una rica cultura. Ya sea explorando su
+              patrimonio colonial, disfrutando de la playa o sumergiéndote en su
+              vibrante escena cultural, Cartagena ofrece una experiencia única
+              que deleita a viajeros de todo el mundo.
+            </p>
+            <img
+              src="assets/img/cartagenaVista.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container embed-responsive mt-4">
+    <div class="card-columns">
+      <div class="card bg-transparent custom-border-primary">
+        <div class="card-body">
+          <h5 class="textoCarta card-title">Pedro de Heredia</h5>
+          <!-- Usar el nuevo componente de modelo3D -->
+          <app-modelo3d></app-modelo3d>
+          <p class="textoFormato fondo-blanco">
+            Pedro de Heredia fue un explorador y conquistador español, conocido
+            por ser el fundador de la ciudad de Cartagena de Indias en la actual
+            Colombia.
+          </p>
+        </div>
+      </div>
+
+      <!-- Agregar otra tarjeta horizontal aquí -->
+      <div class="card bg-transparent custom-border-primary">
+        <div class="card-body">
+          <h5 class="textoCarta card-title">Cultura</h5>
+          <!-- Contenido de la segunda tarjeta -->
+          <app-modelo3d2></app-modelo3d2>
+          <div class="">
+            <p class="textoFormato fondo-blanco">
+              La cultura de Cartagena de Indias es una fusión única de
+              influencias indígenas, africanas y europeas, que se refleja en su
+              arquitectura, música, danzas, gastronomía y festivales.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card bg-transparent custom-border-primary">
+        <div class="card-body">
+          <h5 class="textoCarta card-title">Historia</h5>
+          <!-- Contenido de la segunda tarjeta -->
+          <app-modelo3d3></app-modelo3d3>
+          <p class="textoFormato fondo-blanco">
+            Con murallas y fortalezas, la ciudad ha preservado su patrimonio
+            colonial. Hoy, Cartagena es un destino turístico destacado, conocido
+            por su rica cultura, playas y arquitectura histórica.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="background-color: #fff; border-radius: 10px; opacity: 0.9">
+    <h2 class="ml-3 p-2" style="font-weight: bold; font-size: 20px">
+      Descubre a Cartagena
+    </h2>
+    <a
+      class="btn ml-5 mb-3 mt-2"
+      [routerLink]="['/about']"
+      role="button"
+      style="background-color: #240df0; border-color: #240df0; color: #fff"
+    >
+      Ver más sitios
+    </a>
+  </div>
+  <div class="container embed-responsive">
+    <h1 class="textoP text-white">Recorrido</h1>
+    <hr />
+    <div class="espacio" id="fondos" style="width: 100%; height: 100%"></div>
+  </div>
+</div>

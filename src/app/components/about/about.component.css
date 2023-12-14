@@ -1,0 +1,118 @@
+.lol{
+  background: red;
+}
+.custom-border-primary {
+  border: 5px solid #000;
+}
+
+.embed-responsive-item {
+  border-radius: 10px;
+  overflow: hidden;
+  opacity: 0.8;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+
+.fondo-blanco {
+  margin-top: 5px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.textoFormato{
+  color: #000;
+  text-align:center;
+  font-size: 16px;
+  font-weight: 500;
+  border: 3px solid transparent;
+}
+
+.textoP{
+  position: relative;
+  text-align:justify;
+  color: #fff;
+  font-size: 2rem;
+  border: 3px solid transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.952);
+}
+
+.textoCarta{
+  color: #fff;
+  font-size: 2rem;
+  border: 3px solid transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.952);
+}
+
+.card-text{
+  color: #000;
+  font-size: 16px;
+  border: 3px solid transparent;
+}
+
+.tituloCard{
+  color: #000;
+  font-weight: bold;
+  font-size: 30px;
+  border: 3px solid transparent;
+  text-shadow: 2px 2px 4px rgba(99, 97, 97, 0.952);
+}
+
+.main-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.753);
+  font-size: 6rem;
+  letter-spacing: 2px;
+  border: 3px solid transparent;
+  padding: 5px;
+}
+
+
+.main-text2 {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.753);
+  font-size: 3rem;
+  letter-spacing: 2px;
+  border: 3px solid transparent;
+  padding: 5px;
+}
+.boton {
+  position: absolute;
+  top: 80%;
+  left: 48%;
+  text-align: center;
+  z-index: 1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.753);
+  border: 3px solid transparent;
+  padding: 5px;
+}
+
+.espacio{
+  margin-bottom: 20px;
+}
+
+.embed-responsive-item {
+  border-radius: 10px;
+  overflow: hidden;
+  opacity: 0.8;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+.embed-responsive-item:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}

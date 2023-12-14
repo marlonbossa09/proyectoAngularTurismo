@@ -12,6 +12,10 @@ import { APP_ROUTING } from './app.routes';
 
 import { HeroesService } from './components/services/heroes.service';
 import { TurismoComponent } from './components/turismo/turismo.component';
+import { ThreeSceneComponent } from './three-scene/three-scene.component';
+import { Modelo3DComponent } from './components/home/modelo3D.component';
+import { Modelo3D2Component } from './components/home/modelo3D2.component';
+import { Modelo3D3Component } from './components/home/modelo3D3.component';
 
 // SERVICIOS
 
@@ -22,7 +26,11 @@ import { TurismoComponent } from './components/turismo/turismo.component';
     HomeComponent,
     AboutComponent,
     HeroesComponent,
-    TurismoComponent
+    TurismoComponent,
+    ThreeSceneComponent,
+    Modelo3DComponent,
+    Modelo3D2Component,
+    Modelo3D3Component
   ],
   imports: [
     BrowserModule,
