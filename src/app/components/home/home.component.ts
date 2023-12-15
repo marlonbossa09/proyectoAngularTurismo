@@ -65,7 +65,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
 
   private init() {
-    this.camera.position.z = 50;
+    this.camera.position.z = 20;
     this.camera.scale.set(0.5, 0.5, 0.5);
 
     this.renderer.setSize(window.innerWidth * 0.78, window.innerHeight * 0.78);
