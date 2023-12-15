@@ -14,7 +14,7 @@
 .boton {
   position: absolute;
   top: 80%;
-  left: 48%;
+  left: 45%;
   text-align: center;
   z-index: 1;
   color: #240df0;
@@ -127,11 +127,49 @@
     left: 42%;
   }
   .main-text{
-    font-size: 1.7rem;
+    font-size: 2rem;
     top: 40%;
   }
   .main-text2 {
     font-size: 0.9rem; /* Ajusta el tamaño del texto del encabezado para dispositivos más pequeños */
     top: 55%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1000px) {
+  .boton {
+   font-size: 0.7rem;
+    padding: 4px 10px;
+    top: 70%;
+    left: 45%;
+  }
+  .main-text {
+    font-size: 2rem;
+    top: 45%;
+  }
+  .main-text2 {
+    font-size: 1rem;
+    top: 60%;
+  }
+}
+
+@media (max-width: 480px) {
+  .boton {
+   font-size: 0.5rem;
+    padding: 2px 6px;
+    top: 65%;
+    left: 40%;
+  }
+  .main-text {
+    font-size: 1.9rem;
+    top: 30%;
+  }
+  .main-text2 {
+    font-size: 0.7rem;
+    top: 55%;
+  }
+
+  .textoP{
+    font-size: 1.5rem;
   }
 }
